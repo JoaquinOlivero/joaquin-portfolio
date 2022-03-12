@@ -25,13 +25,14 @@
             letter-spacing: 1.8px;
             gap: 60px;
             div{
-                transition: transform 100ms ease-in-out, font-weight 100ms ease-in-out, color 300ms ease-in-out, opacity 300ms ease-in-out;
+                transition: transform 100ms ease-in-out, font-weight 100ms ease-in-out, color 100ms ease-in-out, opacity 300ms ease-in-out;
                 transform: translateZ(0);
                 -webkit-font-smoothing: subpixel-antialiased;
                 backface-visibility: hidden;
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.01);
+                    color: #1aa19b;
                     font-weight: 500;
                 }
             }

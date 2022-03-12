@@ -6,13 +6,13 @@ function Navbar() {
 
     const mouseEnterMenu = (e) => {
         menuRef.current.childNodes.forEach(element => {
-            element !== e && element.setAttribute('style', 'color: gray; opacity: 0.2')
+            element !== e && element.setAttribute('style', 'opacity: 0.2')
         });
     }
 
     const mouseLeaveMenu = () => {
         menuRef.current.childNodes.forEach(element => {
-            element.setAttribute('style', 'color: black; opacity: 1')
+            element.setAttribute('style', 'opacity: 1')
         });
     }
 
