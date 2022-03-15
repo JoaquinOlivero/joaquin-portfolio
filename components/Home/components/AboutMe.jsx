@@ -22,37 +22,39 @@ function AboutMe() {
                             <h3>Frontend</h3>
                             <ul>
                                 <li>
-                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="" />
+                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />
                                     HTML
                                 </li>
-                                <li> <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="" /> CSS</li>
-                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="" /> SASS</li>
-                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="" /> JavaScript</li>
+                                <li> <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" /> CSS</li>
+                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="SASS" /> SASS</li>
+                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" /> JavaScript</li>
                             </ul>
                         </div>
                         <div>
                             <h3>Javascript</h3>
                             <ul>
-                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="" /> Node.js</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="" /> React</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="" /> Next.js</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/electron-1.svg" alt="" /> Electron</li>
+                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" /> Node.js</li>
+                                <li> <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" /> React</li>
+                                <li> <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" /> Next.js</li>
+                                <li> <img src="https://cdn.worldvectorlogo.com/logos/electron-1.svg" alt="Electron" /> Electron</li>
                             </ul>
                         </div>
                         <div>
                             <h3>Databases</h3>
                             <ul>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="" /> PostgreSQL</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="" /> MongoDB</li>
+                                <li> <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL" /> PostgreSQL</li>
+                                <li> <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" /> MongoDB</li>
                             </ul>
                         </div>
                         <div>
                             <h3>Others</h3>
                             <ul>
-                                <li> <img src="https://e7.pngegg.com/pngimages/165/338/png-clipart-linux-linux-thumbnail.png" alt="" /> Linux</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="" /> Docker</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="" /> Git</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="" /> GitHub</li>
+                                <li> <img src="https://e7.pngegg.com/pngimages/165/338/png-clipart-linux-linux-thumbnail.png" alt="Linux" /> Linux</li>
+                                <li> <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" /> Docker</li>
+                                <li> <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git" /> Git</li>
+                                <li> <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub" /> GitHub</li>
+                                <li> <img src="https://w7.pngwing.com/pngs/23/186/png-transparent-cloudflare-content-delivery-network-glassdoor-business-cloudbleed-others-service-orange-logo.png" alt="CloudFlare" /> CloudFlare</li>
+                                <li> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Caddy_2_lock_icon_and_wordmark_logo.svg/1200px-Caddy_2_lock_icon_and_wordmark_logo.svg.png" alt="Caddy" /> Caddy</li>
                             </ul>
                         </div>
                     </div>
