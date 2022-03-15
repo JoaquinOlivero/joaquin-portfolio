@@ -1,0 +1,119 @@
+// @import '../../globals.scss';
+
+.Projects{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h2{
+        text-align: center;
+        margin: 0;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+    }
+    .Projects_cards_container{
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+        .Projects_card_container{
+            position: relative;
+            margin-bottom: 90px;
+            width: 100%;
+            height: 200px;
+            box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.5);
+            border-radius: 25px;
+
+            .Projects_card_content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                .Projects_card_left{
+                    width: 30%;
+                    height: 100%;
+                    background-color: #1aa19ace;
+                    border-top-left-radius: 25px;
+                    border-bottom-left-radius: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .Projects_card_left_title{
+                        color: white;
+                        font-size: 36px;
+                        font-weight: 600;
+                        letter-spacing: 2px;
+                    }
+                    .Projects_card_left_stack{
+                        display: flex;
+                        align-items: center;
+                        font-family: 'Rubik';
+                        position: absolute;
+                        bottom: -16%;
+                        left: 2%;
+                        span{
+                            letter-spacing: 3px;
+                            font-size: 12px;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                        }
+                        img{
+                            margin: 0 2px;
+                            height: 30px;
+                        }
+                    }
+                }
+
+                .Projects_card_right{
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    p{
+                        line-height: 22px;
+                        margin: 0;
+                        margin-left: 10px;
+                        margin-bottom: 5px;
+                        a{
+                            font-weight: 600;
+                            font-style: italic;
+                            color: rgba(30, 26, 223, 0.6);
+                            transition: color 100ms ease;
+                            &:hover{
+                                color: rgba(26, 161, 154, 0.81);
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .Projects_urls{
+                width: 100%;
+                position: absolute;
+                top: -10%;
+                display: flex;
+                justify-content: space-between;
+                a{
+                    font-family: 'Rubik';
+                    font-weight: 400;
+                    margin: 0 20px;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    &:hover{
+                        transform: scale(1.04);
+                        color: rgba(26, 161, 154, 0.81);
+                        font-weight: 500;
+                    }
+                }
+            }
+
+        }
+    }
+}
