@@ -16,6 +16,11 @@ function Navbar() {
         });
     }
 
+    const handleClickOnItem = (itemId) => {
+        const element = document.getElementById(itemId)
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.Navbar_content}>
@@ -25,8 +30,8 @@ function Navbar() {
                 </div>
 
                 <div className={styles.Navbar_content_menu} ref={menuRef} >
-                    <div onMouseEnter={(e) => mouseEnterMenu(e.target)} onMouseLeave={mouseLeaveMenu}>About Me</div>
-                    <div onMouseEnter={(e) => mouseEnterMenu(e.target)} onMouseLeave={mouseLeaveMenu}>Projects</div>
+                    <div onMouseEnter={(e) => mouseEnterMenu(e.target)} onMouseLeave={mouseLeaveMenu} onClick={() => handleClickOnItem('aboutMe')}>About Me</div>
+                    <div onMouseEnter={(e) => mouseEnterMenu(e.target)} onMouseLeave={mouseLeaveMenu} onClick={() => handleClickOnItem('projects')}>Projects</div>
                     <div onMouseEnter={(e) => mouseEnterMenu(e.target)} onMouseLeave={mouseLeaveMenu}>Contact</div>
                 </div>
             </div>

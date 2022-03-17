@@ -2,7 +2,7 @@ import styles from '../../../styles/Home/components/AboutMe.module.scss'
 
 function AboutMe() {
     return (
-        <div className={styles.AboutMe}>
+        <div className={styles.AboutMe} id='aboutMe'>
             <div className={styles.AboutMe_content}>
                 <div>
                     <h2>About Me</h2>

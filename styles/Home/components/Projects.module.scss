@@ -1,5 +1,3 @@
-// @import '../../globals.scss';
-
 .Projects{
     width: 100%;
     height: 100vh;
@@ -32,9 +30,10 @@
                 height: 100%;
                 display: flex;
                 .Projects_card_left{
+                    position: relative;
                     width: 30%;
                     height: 100%;
-                    background-color: #1aa19ace;
+                    background-color: #1aa19aa8;
                     border-top-left-radius: 25px;
                     border-bottom-left-radius: 25px;
                     display: flex;
@@ -70,6 +69,28 @@
                             }
                         }
                     }
+
+                    .Projects_urls{
+                        width: 100%;
+                        position: absolute;
+                        top: 5%;
+                        display: flex;
+                        justify-content: space-between;
+                        a{
+                            color: white;
+                            font-family: 'Rubik';
+                            font-weight: 400;
+                            margin: 0 10px;
+                            font-size: 13px;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            transition: all 100ms ease;
+                            &:hover{
+                                transform: scale(1.04);
+                                font-weight: 500;
+                            }
+                        }
+                    }
                 }
 
                 .Projects_card_right{
@@ -97,28 +118,6 @@
                     }
                 }
             }
-
-            .Projects_urls{
-                width: 100%;
-                position: absolute;
-                top: -10%;
-                display: flex;
-                justify-content: space-between;
-                a{
-                    font-family: 'Rubik';
-                    font-weight: 400;
-                    margin: 0 20px;
-                    font-size: 13px;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
-                    &:hover{
-                        transform: scale(1.04);
-                        color: rgba(26, 161, 154, 0.81);
-                        font-weight: 500;
-                    }
-                }
-            }
-
         }
     }
 }

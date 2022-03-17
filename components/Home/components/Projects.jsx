@@ -2,18 +2,19 @@ import styles from '../../../styles/Home/components/Projects.module.scss'
 
 function Projects() {
     return (
-        <div className={styles.Projects}>
+        <div className={styles.Projects} id='projects'>
             <h2>Projects</h2>
             <div className={styles.Projects_cards_container}>
 
                 {/* NOTECLOUD */}
                 <div className={styles.Projects_card_container}>
-                    <div className={styles.Projects_urls}>
-                        <a href="https://notecloud.xyz" target="_blank">Website</a>
-                        <a href="https://github.com/JoaquinOlivero/notecloud" target="_blank">Github Repo</a>
-                    </div>
+
                     <div className={styles.Projects_card_content}>
                         <div className={styles.Projects_card_left}>
+                            <div className={styles.Projects_urls}>
+                                <a href="https://notecloud.xyz" target="_blank">Website</a>
+                                <a href="https://github.com/JoaquinOlivero/notecloud" target="_blank">Github Repo</a>
+                            </div>
                             <div className={styles.Projects_card_left_title}>
                                 NoteCloud
                             </div>
@@ -41,12 +42,13 @@ function Projects() {
 
                 {/* MOVIECRIT */}
                 <div className={styles.Projects_card_container}>
-                    <div className={styles.Projects_urls}>
-                        <a href="https://moviecrit.xyz" target="_blank">Website</a>
-                        <a href="https://github.com/JoaquinOlivero/moviecrit" target="_blank">Github Repo</a>
-                    </div>
+
                     <div className={styles.Projects_card_content}>
                         <div className={styles.Projects_card_left}>
+                            <div className={styles.Projects_urls}>
+                                <a href="https://moviecrit.xyz" target="_blank">Website</a>
+                                <a href="https://github.com/JoaquinOlivero/moviecrit" target="_blank">Github Repo</a>
+                            </div>
                             <div className={styles.Projects_card_left_title}>
                                 MovieCrit
                             </div>
@@ -68,12 +70,13 @@ function Projects() {
 
                 {/* FOODIEMAKERS */}
                 <div className={styles.Projects_card_container} style={{ marginBottom: '30px' }}>
-                    <div className={styles.Projects_urls}>
-                        <a href="https://foodiemakers.xyz" target="_blank">Website</a>
-                        <a href="https://github.com/JoaquinOlivero/foodiemakers" target="_blank">Github Repo</a>
-                    </div>
+
                     <div className={styles.Projects_card_content}>
                         <div className={styles.Projects_card_left}>
+                            <div className={styles.Projects_urls}>
+                                <a href="https://foodiemakers.xyz" target="_blank">Website</a>
+                                <a href="https://github.com/JoaquinOlivero/foodiemakers" target="_blank">Github Repo</a>
+                            </div>
                             <div className={styles.Projects_card_left_title} style={{ fontSize: '32px' }}>
                                 FoodieMakers
                             </div>
