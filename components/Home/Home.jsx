@@ -1,5 +1,6 @@
 import styles from '../../styles/Home/Home.module.scss'
 import AboutMe from './components/AboutMe'
+import Contact from './components/Contact'
 import Intro from './components/Intro'
 import Projects from './components/Projects'
 
@@ -9,6 +10,7 @@ function Home() {
             <Intro />
             <AboutMe />
             <Projects />
+            <Contact />
         </div>
     )
 }

@@ -32,6 +32,7 @@ function Navbar() {
                 <div className={styles.Navbar_content_menu} ref={menuRef} >
                     <div onMouseEnter={(e) => mouseEnterMenu(e.target)} onMouseLeave={mouseLeaveMenu} onClick={() => handleClickOnItem('aboutMe')}>About Me</div>
                     <div onMouseEnter={(e) => mouseEnterMenu(e.target)} onMouseLeave={mouseLeaveMenu} onClick={() => handleClickOnItem('projects')}>Projects</div>
+                    <div onMouseEnter={(e) => mouseEnterMenu(e.target)} onMouseLeave={mouseLeaveMenu} onClick={() => handleClickOnItem('contact')}>Contact</div>
                 </div>
             </div>
         </div>
