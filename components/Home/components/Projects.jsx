@@ -1,6 +1,5 @@
-import { useRef, useEffect } from 'react/cjs/react.development';
+import { useRef, useEffect } from 'react';
 import styles from '../../../styles/Home/components/Projects.module.scss'
-// import { useRef, useEffect } from 'react'
 
 function Projects() {
     const projectsRef = useRef(null)
@@ -34,8 +33,8 @@ function Projects() {
                     <div className={styles.Projects_card_content}>
                         <div className={styles.Projects_card_left}>
                             <div className={styles.Projects_urls}>
-                                <a href="https://notecloud.xyz" target="_blank">Website</a>
-                                <a href="https://github.com/JoaquinOlivero/notecloud" target="_blank">Github Repo</a>
+                                <a href="https://notecloud.xyz" target="_blank" rel="noopener noreferrer">Website</a>
+                                <a href="https://github.com/JoaquinOlivero/notecloud" target="_blank" rel="noopener noreferrer">Github Repo</a>
                             </div>
                             <div className={styles.Projects_card_left_title}>
                                 NoteCloud
@@ -49,7 +48,7 @@ function Projects() {
                             </div>
                         </div>
                         <div className={styles.Projects_card_right}>
-                            <p>NoteCloud is my favourite and latest project. It's a note taking web application inspired on <a href="https://notion.so" target="_blank">notion.so</a>. It uses <a href='https://editorjs.io/' target="_blank">Editor.js</a> which is a Block-Styled editor.
+                            <p>NoteCloud is my favourite and latest project. It's a note taking web application inspired on <a href="https://notion.so" target="_blank" rel="noopener noreferrer">notion.so</a>. It uses <a href='https://editorjs.io/' target="_blank" rel="noopener noreferrer">Editor.js</a> which is a Block-Styled editor.
                                 Once you login, it has many features, for example:
                             </p>
                             <p>It shows all the created notes and their children in a nested tree view.
@@ -68,8 +67,8 @@ function Projects() {
                     <div className={styles.Projects_card_content}>
                         <div className={styles.Projects_card_left}>
                             <div className={styles.Projects_urls}>
-                                <a href="https://moviecrit.xyz" target="_blank">Website</a>
-                                <a href="https://github.com/JoaquinOlivero/moviecrit" target="_blank">Github Repo</a>
+                                <a href="https://moviecrit.xyz" target="_blank" rel="noopener noreferrer">Website</a>
+                                <a href="https://github.com/JoaquinOlivero/moviecrit" target="_blank" rel="noopener noreferrer">Github Repo</a>
                             </div>
                             <div className={styles.Projects_card_left_title}>
                                 MovieCrit
@@ -96,8 +95,8 @@ function Projects() {
                     <div className={styles.Projects_card_content}>
                         <div className={styles.Projects_card_left}>
                             <div className={styles.Projects_urls}>
-                                <a href="https://foodiemakers.xyz" target="_blank">Website</a>
-                                <a href="https://github.com/JoaquinOlivero/foodiemakers" target="_blank">Github Repo</a>
+                                <a href="https://foodiemakers.xyz" target="_blank" rel="noopener noreferrer">Website</a>
+                                <a href="https://github.com/JoaquinOlivero/foodiemakers" target="_blank" rel="noopener noreferrer">Github Repo</a>
                             </div>
                             <div className={styles.Projects_card_left_title} style={{ fontSize: '32px' }}>
                                 FoodieMakers
