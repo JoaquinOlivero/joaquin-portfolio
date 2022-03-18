@@ -14,7 +14,6 @@ function SideNavBar() {
             <div className={styles.SideNavbar_content_menu} ref={menuRef}>
                 <div onClick={() => handleClickOnItem('aboutMe')} id='aboutMeSideNavbar'>About Me</div>
                 <div onClick={() => handleClickOnItem('projects')} id='projectsSideNavbar'>Projects</div>
-                <div>Contact</div>
             </div>
         </div>
     )
