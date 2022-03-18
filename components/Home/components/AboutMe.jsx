@@ -1,8 +1,29 @@
 import styles from '../../../styles/Home/components/AboutMe.module.scss'
+import { useRef, useEffect } from 'react'
 
 function AboutMe() {
+    const aboutMeRef = useRef(null)
+
+    useEffect(() => {
+        const aboutMeObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio <= 0.5) {
+                    document.getElementById('aboutMeSideNavbar').setAttribute('style', 'opacity: 0.2')
+                } else if (entry.intersectionRatio >= 0.5) {
+                    document.getElementById('aboutMeSideNavbar').setAttribute('style', 'opacity: 0.7; color: rgb(26, 161, 155); font-weight: 500')
+                }
+            })
+        }, { threshold: [0.0, 0.5] })
+
+        aboutMeObserver.observe(aboutMeRef.current)
+
+        return () => {
+            aboutMeObserver.unobserve(aboutMeRef.current)
+        }
+    }, [])
+
     return (
-        <div className={styles.AboutMe} id='aboutMe'>
+        <div className={styles.AboutMe} id='aboutMe' ref={aboutMeRef}>
             <div className={styles.AboutMe_content}>
                 <div>
                     <h2>About Me</h2>

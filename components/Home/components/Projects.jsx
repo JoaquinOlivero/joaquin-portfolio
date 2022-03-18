@@ -1,8 +1,30 @@
+import { useRef, useEffect } from 'react/cjs/react.development';
 import styles from '../../../styles/Home/components/Projects.module.scss'
+// import { useRef, useEffect } from 'react'
 
 function Projects() {
+    const projectsRef = useRef(null)
+
+    useEffect(() => {
+        const projectsObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio <= 0.5) {
+                    document.getElementById('projectsSideNavbar').setAttribute('style', 'opacity: 0.2')
+                } else if (entry.intersectionRatio >= 0.5) {
+                    document.getElementById('projectsSideNavbar').setAttribute('style', 'opacity: 0.7; color: rgb(26, 161, 155); font-weight: 500')
+                }
+            })
+        }, { threshold: [0.0, 0.5] })
+
+        projectsObserver.observe(projectsRef.current)
+
+        return () => {
+            projectsObserver.unobserve(projectsRef.current)
+        }
+    }, [])
+
     return (
-        <div className={styles.Projects} id='projects'>
+        <div className={styles.Projects} id='projects' ref={projectsRef}>
             <h2>Projects</h2>
             <div className={styles.Projects_cards_container}>
 

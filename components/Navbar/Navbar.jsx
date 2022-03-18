@@ -1,4 +1,4 @@
-import { useRef } from 'react/cjs/react.development';
+import { useRef } from 'react';
 import styles from '../../styles/Navbar/Navbar.module.scss'
 
 function Navbar() {
