@@ -48,7 +48,7 @@ function Projects() {
                             </div>
                         </div>
                         <div className={styles.Projects_card_right}>
-                            <p>NoteCloud is my favourite and latest project. It's a note taking web application inspired on <a href="https://notion.so" target="_blank" rel="noopener noreferrer">notion.so</a>. It uses <a href='https://editorjs.io/' target="_blank" rel="noopener noreferrer">Editor.js</a> which is a Block-Styled editor.
+                            <p>NoteCloud is my favourite project. It is a note taking web application inspired on <a href="https://notion.so" target="_blank" rel="noopener noreferrer">notion.so</a>. It uses <a href='https://editorjs.io/' target="_blank" rel="noopener noreferrer">Editor.js</a> which is a Block-Styled editor.
                                 Once you login, it has many features, for example:
                             </p>
                             <p>It shows all the created notes and their children in a nested tree view.
