@@ -48,7 +48,7 @@ function Projects() {
                         </div>
                         <div className={styles.Projects_card_right} id={styles.notecloud_card_right_background}>
                             <div className={styles.Projects_card_right_image_container}>
-                                <Image src='/images/notecloud-projects_rixl6i.png' layout='fill' objectFit='cover' objectPosition="0% 20%" />
+                                <Image src='/images/notecloud-projects_rixl6i.png' layout='fill' objectFit='cover' objectPosition="0% 20%" priority={true} unoptimized={true} />
                             </div>
                         </div>
                     </div>
@@ -74,38 +74,11 @@ function Projects() {
                         </div>
                         <div className={styles.Projects_card_right} id={styles.moviecrit_card_right_background}>
                             <div className={styles.Projects_card_right_image_container}>
-                                <Image src='/images/moviecrit-projects_pqbjvk.png' layout='fill' objectFit='cover' objectPosition="0% 0%" unoptimized={true} />
+                                <Image src='/images/moviecrit-projects_pqbjvk.png' layout='fill' objectFit='cover' objectPosition="0% 0%" unoptimized={true} priority={true} />
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* FOODIEMAKERS */}
-                {/* <div className={styles.Projects_card_container} style={{ marginBottom: '30px' }}>
-
-                    <div className={styles.Projects_card_content}>
-                        <div className={styles.Projects_card_left}>
-                            <div className={styles.Projects_urls}>
-                                <a href="https://foodiemakers.xyz" target="_blank" rel="noopener noreferrer">Website</a>
-                                <a href="https://github.com/JoaquinOlivero/foodiemakers" target="_blank" rel="noopener noreferrer">Github Repo</a>
-                            </div>
-                            <div className={styles.Projects_card_left_title} style={{ fontSize: '32px' }}>
-                                FoodieMakers
-                            </div>
-                            <div className={styles.Projects_card_left_stack}>
-                                <span>Stack:</span>
-                                <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="" />
-                                <img src="https://assets.website-files.com/61ca3f775a79ec5f87fcf937/6202fcdee5ee8636a145a41b_1234.png" alt="" />
-                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="" />
-                            </div>
-                        </div>
-                        <div className={styles.Projects_card_right}>
-                            <p>FoodieMakers is a sort of marketplace for food manufacturers. Registered users can create publications offering products. A publication contains images, a product price, a product description and a button to contact the seller. In addition, each publication has a user review and rating system.
-                                Users interested in a product can contact the seller through real-time messaging.
-                            </p>
-                            <p>If you'd like a more detailed explanation of the website features, I recommend you to visit the GitHub repo. &#128151;</p>
-                        </div>
-                    </div>
-                </div> */}
             </div>
             <div className={styles.Projects_extra}>
                 <div className={styles.Projects_current_work_container}>
