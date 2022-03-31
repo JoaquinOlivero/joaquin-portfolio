@@ -3,7 +3,6 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     h2{
         text-align: center;
         margin: 0;
@@ -16,107 +15,215 @@
         margin-right: auto;
         width: 55%;
         .Projects_card_container{
+            white-space: nowrap;
             position: relative;
-            margin-bottom: 90px;
+            margin-bottom: 40px;
             width: 100%;
-            height: 200px;
-            box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.5);
-            -webkit-box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.5);
-            -moz-box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.5);
+            height: 250px;
+            box-shadow: 0px 0px 25px -8px rgba(230, 230, 230, 1);
+            -webkit-box-shadow: 0px 0px 25px -8px rgb(230, 230, 230);
+            -moz-box-shadow: 0px 0px 25px -8px rgba(230, 230, 230, 1);
             border-radius: 25px;
-
+            background-color: rgba(255, 255, 255, 1);
+            overflow: hidden;
             .Projects_card_content{
-                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                width: 96%;
                 height: 100%;
                 display: flex;
+                align-items: center;
+                justify-content: space-between;
                 .Projects_card_left{
                     position: relative;
-                    width: 30%;
-                    height: 100%;
-                    background-color: #1aa19aa8;
-                    border-top-left-radius: 25px;
-                    border-bottom-left-radius: 25px;
+                    font-family: 'Rubik';
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    width: 40%;
+                    height: 100%;
                     .Projects_card_left_title{
-                        color: white;
-                        font-size: 36px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-size: 25px;
                         font-weight: 600;
-                        letter-spacing: 2px;
+                        margin-bottom: 2px;
                     }
                     .Projects_card_left_stack{
+                        color: rgb(200, 200, 200);
+                        font-size: 13px;
+                    }
+                    .Projects_card_left_paragraph{
+                        font-size: 15px;
+                        margin: 15px 0;
+                    }
+                    .Projects_card_left_btns{
+                        position: absolute;
+                        bottom: 5%;
+                        width: 100%;
                         display: flex;
                         align-items: center;
-                        font-family: 'Rubik';
-                        position: absolute;
-                        bottom: -18%;
-                        left: 2%;
-                        span{
-                            letter-spacing: 3px;
-                            font-size: 12px;
-                            font-weight: 500;
-                            text-transform: uppercase;
-                        }
-                        img{
-                            cursor: pointer;
-                            margin: 0 5px;
-                            height: 30px;
-                            transition: transform 200ms ease;
-                            &:hover{
-                                transform: scale(1.5);
-                            }
-                        }
-                    }
-
-                    .Projects_urls{
-                        width: 100%;
-                        position: absolute;
-                        top: 5%;
-                        display: flex;
-                        justify-content: space-between;
+                        justify-content: space-evenly;
+                        
                         a{
+                            font-size: 14px;
+                            letter-spacing: 0.5px;
                             color: white;
-                            font-family: 'Rubik';
-                            font-weight: 400;
-                            margin: 0 10px;
-                            font-size: 13px;
-                            letter-spacing: 1px;
-                            text-transform: uppercase;
-                            transition: all 100ms ease;
-                            &:hover{
-                                transform: scale(1.04);
-                                font-weight: 500;
-                            }
+                            padding: 8px 6px;
+                            border-radius: 15px;
+                            font-weight: 600;
+                            transition: background-color 400ms ease;
                         }
                     }
                 }
 
                 .Projects_card_right{
-                    width: 70%;
+                    width: 60%;
+                    height: 250px;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: center;
+                    box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.5);
+                    -webkit-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.5);
+                    -moz-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.5);
+                    .Projects_card_right_image_container{
+                        position: relative;
+                        width: 95%;
+                        height: 80%;
+                        align-self: flex-end;
+                    }
+                }
+                #moviecrit_card_right_background{
+                    background: rgb(100,159,204);
+                    background: -moz-linear-gradient(180deg, rgba(100,159,204,1) 0%, rgba(182,107,214,1) 100%);
+                    background: -webkit-linear-gradient(180deg, rgba(100,159,204,1) 0%, rgba(182,107,214,1) 100%);
+                    background: linear-gradient(180deg, rgba(100,159,204,1) 0%, rgba(182,107,214,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#649fcc",endColorstr="#b66bd6",GradientType=1);
+                }
+
+                #notecloud_card_right_background{
+                    background: rgb(120,200,196);
+                    background: -moz-linear-gradient(180deg, rgba(120,200,196,1) 0%, rgba(45,51,73,1) 100%);
+                    background: -webkit-linear-gradient(180deg, rgba(120,200,196,1) 0%, rgba(45,51,73,1) 100%);
+                    background: linear-gradient(180deg, rgba(120,200,196,1) 0%, rgba(45,51,73,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#78c8c4",endColorstr="#2d3349",GradientType=1);
+                }
+
+                #Projects_card_left_btns_notecloud{
+                    a{
+                        background-color: #1aa19ad0;
+                        &:hover{
+                            background-color: rgba(45,51,73);
+                        }
+                    }
+                }
+
+                #Projects_card_left_btns_moviecrit{
+                    a{
+                        position: relative;
+                        background-color: #3081C2;
+                        &:hover{
+                            background-color: #A25ABF;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+
+    // Extra works
+    .Projects_extra{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+
+        // Current Work
+        .Projects_current_work_container{
+            h3{
+                text-align: center;
+                margin: 0;
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+        }
+
+        // Other projects
+        .Projects_other_projects_container{
+            h3{
+                text-align: center;
+                margin: 0;
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+        }
+        .Projects_extra_cards{
+            font-family: 'Rubik';
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            .Projects_extra_card_container{
+                margin: 5px 5px 0px 5px;
+                width: 45%;
+                height: 180px;
+                background-color: white;
+                box-shadow: 0px 0px 25px -8px rgba(230, 230, 230, 1);
+                -webkit-box-shadow: 0px 0px 25px -8px rgb(230, 230, 230);
+                -moz-box-shadow: 0px 0px 25px -8px rgba(230, 230, 230, 1);
+                border-radius: 25px;
+                .Projects_extra_card_content{
+                    position: relative;
+                    width: 100%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
-                    p{
-                        line-height: 22px;
-                        margin: 0;
-                        margin-left: 10px;
+                    h4{
+                        text-align: center;
+                        margin-top: 10px;
                         margin-bottom: 5px;
+                        font-size: 18px;
+                        letter-spacing: 0.5px;
+                    }
+                    span{
+                        margin: 5px 0;
+                        color: rgb(200, 200, 200);
+                        font-size: 12px;
+                    }
+                    p{
+                        text-align: center;
+                        margin: 15px 0;
+                    }
+                    .Projects_extra_card_content_btns{
+                        position: absolute;
+                        bottom: 5%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
                         a{
+                            font-size: 14px;
+                            letter-spacing: 0.5px;
                             font-weight: 600;
-                            font-style: italic;
-                            color: rgba(30, 26, 223, 0.6);
-                            transition: color 100ms ease;
+                            transition: color 250ms ease;
                             &:hover{
-                                color: rgba(26, 161, 154, 0.81);
+                                color: #1aa19ad0;;
                             }
                         }
-
                     }
                 }
+                
             }
         }
     }
