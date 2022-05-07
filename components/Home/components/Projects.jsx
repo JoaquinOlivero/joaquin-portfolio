@@ -90,8 +90,8 @@ function Projects() {
                                 <span>Node - Next.js - Express - PostgreSQL</span>
                                 <p>Create and style PDF documents with code.</p>
                                 <div className={styles.Projects_extra_card_content_btns}>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" style={{ pointerEvents: 'none' }}>Website</a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" style={{ pointerEvents: 'none' }}>GitHub</a>
+                                    <a href="https://codepdf.joaquinolivero.xyz/" target="_blank" rel="noopener noreferrer">Website</a>
+                                    <a href="https://rapidapi.com/ChipiBarijho/api/codepdf" target="_blank" rel="noopener noreferrer">RapidAPI</a>
                                 </div>
                             </div>
                         </div>
