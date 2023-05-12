@@ -2,21 +2,21 @@ import { useRef } from 'react';
 import styles from '../../styles/Navbar/Navbar.module.scss'
 
 function Navbar() {
-    const menuRef = useRef(null)
+    const menuRef = useRef<HTMLDivElement>(null)
 
-    const mouseEnterMenu = (e) => {
-        menuRef.current.childNodes.forEach(element => {
+    const mouseEnterMenu = (e: EventTarget) => {
+        menuRef.current.childNodes.forEach((element: HTMLElement) => {
             element !== e && element.setAttribute('style', 'opacity: 0.2')
         });
     }
 
     const mouseLeaveMenu = () => {
-        menuRef.current.childNodes.forEach(element => {
+        menuRef.current.childNodes.forEach((element: HTMLElement) => {
             element.setAttribute('style', 'opacity: 1')
         });
     }
 
-    const handleClickOnItem = (itemId) => {
+    const handleClickOnItem = (itemId: string) => {
         const element = document.getElementById(itemId)
         element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
     }

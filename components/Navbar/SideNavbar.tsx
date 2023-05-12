@@ -2,9 +2,9 @@ import { useRef } from 'react';
 import styles from '../../styles/Navbar/SideNavbar.module.scss'
 
 function SideNavBar() {
-    const menuRef = useRef(null)
+    const menuRef = useRef<HTMLHeadingElement>(null)
 
-    const handleClickOnItem = (itemId) => {
+    const handleClickOnItem = (itemId: string) => {
         const element = document.getElementById(itemId)
         element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
     }

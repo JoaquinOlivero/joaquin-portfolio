@@ -1,9 +1,10 @@
 import { useRef, useEffect } from 'react';
 import styles from '../../../styles/Home/components/Projects.module.scss'
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Projects() {
-    const projectsRef = useRef(null)
+    const projectsRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const projectsObserver = new IntersectionObserver(entries => {
@@ -36,19 +37,19 @@ function Projects() {
                                 NoteCloud
                             </div>
                             <div className={styles.Projects_card_left_stack}>
-                                Node - React - Express - PostgreSQL
+                                Nodejs - React - Express - PostgreSQL
                             </div>
                             <div className={styles.Projects_card_left_paragraph}>
                                 Real-time note sharing web application.
                             </div>
                             <div className={styles.Projects_card_left_btns} id={styles.Projects_card_left_btns_notecloud}>
-                                <a href="https://notecloud.xyz" target="_blank" rel="noopener noreferrer">Website</a>
-                                <a href="https://github.com/JoaquinOlivero/notecloud" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <Link href="https://notecloud.joaquinolivero.com" target='_blank' rel="noopener noreferrer">Website</Link>
+                                <Link href="https://github.com/JoaquinOlivero/notecloud" target="_blank" rel="noopener noreferrer">GitHub</Link>
                             </div>
                         </div>
                         <div className={styles.Projects_card_right} id={styles.notecloud_card_right_background}>
                             <div className={styles.Projects_card_right_image_container}>
-                                <Image src='/images/notecloud-projects_rixl6i.png' layout='fill' objectFit='cover' objectPosition="0% 20%" priority={true} unoptimized={true} />
+                                <Image src='/images/notecloud-projects_rixl6i.png' fill={true} style={{ objectFit: "cover", objectPosition: "0% 0%" }} alt='notecloud' />
                             </div>
                         </div>
                     </div>
@@ -62,19 +63,19 @@ function Projects() {
                                 MovieCrit
                             </div>
                             <div className={styles.Projects_card_left_stack}>
-                                Node - React - Express - MongoDB
+                                Nodejs - React - Express - MongoDB
                             </div>
                             <div className={styles.Projects_card_left_paragraph}>
                                 Movie review website.
                             </div>
                             <div className={styles.Projects_card_left_btns} id={styles.Projects_card_left_btns_moviecrit}>
-                                <a href="https://moviecrit.xyz" target="_blank" rel="noopener noreferrer">Website</a>
-                                <a href="https://gitHub.com/JoaquinOlivero/moviecrit" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <Link href="https://moviecrit.joaquinolivero.com" target="_blank" rel="noopener noreferrer">Website</Link>
+                                <Link href="https://gitHub.com/JoaquinOlivero/moviecrit" target="_blank" rel="noopener noreferrer">GitHub</Link>
                             </div>
                         </div>
                         <div className={styles.Projects_card_right} id={styles.moviecrit_card_right_background}>
                             <div className={styles.Projects_card_right_image_container}>
-                                <Image src='/images/moviecrit-projects_pqbjvk.png' layout='fill' objectFit='cover' objectPosition="0% 0%" unoptimized={true} priority={true} />
+                                <Image src='/images/moviecrit-projects_pqbjvk.png' fill={true} style={{ objectFit: "cover", objectPosition: "0% 0%" }} alt='moviecrit' />
                             </div>
                         </div>
                     </div>
@@ -90,8 +91,8 @@ function Projects() {
                                 <span>Node - Next.js - Express - PostgreSQL</span>
                                 <p>Create and style PDF documents with code.</p>
                                 <div className={styles.Projects_extra_card_content_btns}>
-                                    <a href="https://codepdf.joaquinolivero.xyz/" target="_blank" rel="noopener noreferrer">Website</a>
-                                    <a href="https://rapidapi.com/ChipiBarijho/api/codepdf" target="_blank" rel="noopener noreferrer">RapidAPI</a>
+                                    <Link href="https://codepdf.joaquinolivero.xyz/" target="_blank" rel="noopener noreferrer">Website</Link>
+                                    <Link href="https://rapidapi.com/ChipiBarijho/api/codepdf" target="_blank" rel="noopener noreferrer">RapidAPI</Link>
                                 </div>
                             </div>
                         </div>
@@ -109,8 +110,8 @@ function Projects() {
                                 <span>Node - EJS - Express - MongoDB</span>
                                 <p>Marketplace for food manufacturers.</p>
                                 <div className={styles.Projects_extra_card_content_btns}>
-                                    <a href="https://foodiemakers.xyz" target="_blank" rel="noopener noreferrer">Website</a>
-                                    <a href="https://github.com/JoaquinOlivero/foodiemakers" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <Link href="https://foodiemakers.xyz" target="_blank" rel="noopener noreferrer">Website</Link>
+                                    <Link href="https://github.com/JoaquinOlivero/foodiemakers" target="_blank" rel="noopener noreferrer">GitHub</Link>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +123,7 @@ function Projects() {
                                 <span>Electron.js</span>
                                 <p>Personal Minecraft server launcher for Google Cloud Platform VM.</p>
                                 <div className={styles.Projects_extra_card_content_btns}>
-                                    <a href="https://github.com/JoaquinOlivero/gcpvm-minecraft-launcher" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <Link href="https://github.com/JoaquinOlivero/gcpvm-minecraft-launcher" target="_blank" rel="noopener noreferrer">GitHub</Link>
                                 </div>
                             </div>
                         </div>

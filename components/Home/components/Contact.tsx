@@ -46,8 +46,8 @@ function ContactForm({ setMsgSuccess }) {
 }
 
 function Contact() {
-    const [msgSuccess, setMsgSuccess] = useState(false)
-    const contactRef = useRef(null)
+    const [msgSuccess, setMsgSuccess] = useState<boolean>(false)
+    const contactRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const contactObserver = new IntersectionObserver(entries => {

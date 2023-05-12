@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react'
 import styles from '../../../styles/Home/components/Intro.module.scss'
 
 function Intro() {
-    const introRef = useRef()
+    const introRef = useRef<HTMLDivElement>()
 
     useEffect(() => {
         const introObserver = new IntersectionObserver(entries => {

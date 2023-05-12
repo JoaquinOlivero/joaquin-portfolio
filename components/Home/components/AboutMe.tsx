@@ -1,8 +1,9 @@
+import Image from 'next/image'
 import styles from '../../../styles/Home/components/AboutMe.module.scss'
 import { useRef, useEffect } from 'react'
 
 function AboutMe() {
-    const aboutMeRef = useRef(null)
+    const aboutMeRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const aboutMeObserver = new IntersectionObserver(entries => {
@@ -43,39 +44,48 @@ function AboutMe() {
                             <h3>Frontend</h3>
                             <ul>
                                 <li>
-                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />
+                                    <Image src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" width={25} height={20} />
                                     HTML
                                 </li>
-                                <li> <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" /> CSS</li>
-                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="SASS" /> SASS</li>
-                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" /> JavaScript</li>
+                                <li>
+                                    <Image src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" width={25} height={20} />
+                                    CSS
+                                </li>
+                                <li>
+                                    <Image src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="SASS" width={25} height={20} />
+                                    SASS
+                                </li>
+                                <li>
+                                    <Image src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" width={25} height={20} />
+                                    JavaScript
+                                </li>
                             </ul>
                         </div>
                         <div>
                             <h3>Javascript</h3>
                             <ul>
-                                <li> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" /> Node.js</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" /> React</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" /> Next.js</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/electron-1.svg" alt="Electron" /> Electron</li>
+                                <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" /> Node.js</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" /> React</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" /> Next.js</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/electron-1.svg" alt="Electron" /> Electron</li>
                             </ul>
                         </div>
                         <div>
                             <h3>Databases</h3>
                             <ul>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL" /> PostgreSQL</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" /> MongoDB</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL" /> PostgreSQL</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" /> MongoDB</li>
                             </ul>
                         </div>
                         <div>
                             <h3>Others</h3>
                             <ul>
-                                <li> <img src="https://e7.pngegg.com/pngimages/165/338/png-clipart-linux-linux-thumbnail.png" alt="Linux" /> Linux</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" /> Docker</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git" /> Git</li>
-                                <li> <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub" /> GitHub</li>
-                                <li> <img src="https://w7.pngwing.com/pngs/23/186/png-transparent-cloudflare-content-delivery-network-glassdoor-business-cloudbleed-others-service-orange-logo.png" alt="CloudFlare" /> CloudFlare</li>
-                                <li> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Caddy_2_lock_icon_and_wordmark_logo.svg/1200px-Caddy_2_lock_icon_and_wordmark_logo.svg.png" alt="Caddy" /> Caddy</li>
+                                <li> <Image width={25} height={20} src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" alt="Linux" /> Linux</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" /> Docker</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git" /> Git</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub" /> GitHub</li>
+                                <li> <Image width={25} height={20} src="/images/cloudflare-icon-512x512-c1lpcyo0.png " alt="CloudFlare" /> CloudFlare</li>
+                                <li> <Image width={25} height={20} src="https://caddyserver.com/resources/images/caddy-circle-lock.svg" alt="Caddy" /> Caddy</li>
                             </ul>
                         </div>
                     </div>
