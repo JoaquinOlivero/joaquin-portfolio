@@ -88,7 +88,7 @@ function Projects() {
                         <div className={styles.Projects_extra_card_container}>
                             <div className={styles.Projects_extra_card_content}>
                                 <h4>codePDF</h4>
-                                <span>Node - Next.js - Express - PostgreSQL</span>
+                                <span>Node - Next.js - Express</span>
                                 <p>Create and style PDF documents with code.</p>
                                 <div className={styles.Projects_extra_card_content_btns}>
                                     <Link href="https://codepdf.joaquinolivero.xyz/" target="_blank" rel="noopener noreferrer">Website</Link>
