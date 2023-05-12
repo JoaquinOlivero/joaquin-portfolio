@@ -43,22 +43,11 @@ function AboutMe() {
                         <div>
                             <h3>Languages</h3>
                             <ul>
-                                <li>
-                                    <Image src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" width={25} height={20} />
-                                    HTML
-                                </li>
-                                <li>
-                                    <Image src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" width={25} height={20} />
-                                    CSS
-                                </li>
-                                <li>
-                                    <Image src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="SASS" width={25} height={20} />
-                                    SASS
-                                </li>
-                                <li>
-                                    <Image src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" width={25} height={20} />
-                                    JavaScript
-                                </li>
+                                <li><Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/golang-1.svg" alt="Golang" />Golang</li>
+                                <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="TypeScript" />TypeScript</li>
+                                <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />JavaScript</li>
+                                <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />HTML</li>
+                                <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" />CSS</li>
                             </ul>
                         </div>
                         <div>
@@ -68,6 +57,13 @@ function AboutMe() {
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" /> React</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" /> Next.js</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/electron-1.svg" alt="Electron" /> Electron</li>
+                                <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="SASS" /> SASS</li>
+                                <li> <Image width={25} height={20} src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" alt="Linux" /> Linux</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" /> Docker</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git" /> Git</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub" /> GitHub</li>
+                                <li> <Image width={25} height={20} src="/images/cloudflare-icon-512x512-c1lpcyo0.png " alt="CloudFlare" /> CloudFlare</li>
+                                <li> <Image width={25} height={20} src="https://caddyserver.com/resources/images/caddy-circle-lock.svg" alt="Caddy" /> Caddy</li>
                             </ul>
                         </div>
                         <div>
@@ -80,17 +76,10 @@ function AboutMe() {
                         <div>
                             <h3>Other</h3>
                             <ul>
-                                <li> <Image width={25} height={20} src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" alt="Linux" /> Linux</li>
-                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" /> Docker</li>
-                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git" /> Git</li>
-                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub" /> GitHub</li>
-                                <li> <Image width={25} height={20} src="/images/cloudflare-icon-512x512-c1lpcyo0.png " alt="CloudFlare" /> CloudFlare</li>
-                                <li> <Image width={25} height={20} src="https://caddyserver.com/resources/images/caddy-circle-lock.svg" alt="Caddy" /> Caddy</li>
+                                <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/197/197593.png" alt="Spanish" /> Spanish</li>
+                                <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="English" /> English</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className={styles.AboutMe_currently_learning}>
-                        <span>Currently Learning:</span> Go - TypeScript.
                     </div>
                 </div>
             </div>
