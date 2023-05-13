@@ -30,25 +30,46 @@
     }
   }
 
+  .CardsCarrousel_container_arrows {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+    button {
+      cursor: pointer;
+      border: solid rgb(26, 161, 155);
+      border-width: 0 5px 5px 0;
+      display: inline-block;
+      padding: 5px;
+      transition: opacity 200ms ease-in-out;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .CardsCarrousel_arrows_up {
+      transform: rotate(-135deg);
+    }
+
+    .CardsCarrousel_arrows_down {
+      transform: rotate(45deg);
+    }
+  }
+
   .CardsCarrousel_container {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
 
     &::-webkit-scrollbar {
       display: none;
-      width: 25px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: #1aa19b;
-      border: 10px solid #f5f4f6;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: #f5f4f6;
     }
   }
 }

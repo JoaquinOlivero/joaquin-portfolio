@@ -1,5 +1,5 @@
 import styles from "../../styles/Utils/CardsCarrousel/CardsCarrousel.module.scss"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Card from "./Card"
 
 const CardsCarrousel = () => {
@@ -8,6 +8,7 @@ const CardsCarrousel = () => {
     const mcmanagerRef = useRef<HTMLDivElement>(null)
     const notecloudRef = useRef<HTMLDivElement>(null)
     const moviecritRef = useRef<HTMLDivElement>(null)
+    const [currentProject, setCurrentProject] = useState<number>(1)
 
     // Observers
     useEffect(() => {
@@ -67,14 +68,12 @@ const CardsCarrousel = () => {
         moviecritOberserver.observe(moviecritRef.current)
 
         return () => {
-            foodiemakersOberserver.unobserve(foodiemakersRef.current)
-            mcmanagerOberserver.unobserve(mcmanagerRef.current)
-            notecloudOberserver.unobserve(notecloudRef.current)
-            moviecritOberserver.unobserve(moviecritRef.current)
+
         }
     }, [])
 
-    const handleClickOnItem = (ref: HTMLDivElement) => {
+    const handleClickOnItem = (ref: HTMLDivElement, i: number) => {
+        setCurrentProject(i)
         cardsContainerRef.current.scrollTo({
             top: ref.offsetTop,
             left: 0,
@@ -82,14 +81,68 @@ const CardsCarrousel = () => {
         })
     }
 
+    const handleArrowDown = () => {
+        if (currentProject < 4) {
+            switch (currentProject) {
+                case 1:
+                    handleClickOnItem(mcmanagerRef.current, currentProject + 1)
+                    break;
+                case 2:
+                    handleClickOnItem(notecloudRef.current, currentProject + 1)
+                    break;
+                case 3:
+                    handleClickOnItem(moviecritRef.current, currentProject + 1)
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    const handleArrowUp = () => {
+        if (currentProject > 1) {
+            switch (currentProject) {
+                case 2:
+                    handleClickOnItem(foodiemakersRef.current, currentProject - 1)
+                    break;
+                case 3:
+                    handleClickOnItem(mcmanagerRef.current, currentProject - 1)
+                    break;
+                case 4:
+                    handleClickOnItem(notecloudRef.current, currentProject - 1)
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     return (
         <div className={styles.CardsCarrousel_container}>
 
             <div className={styles.CardsCarrousel_container_dots}>
-                <div onClick={() => handleClickOnItem(foodiemakersRef.current)} id='foodiemakers'></div>
-                <div onClick={() => handleClickOnItem(mcmanagerRef.current)} id='mcmanager'></div>
-                <div onClick={() => handleClickOnItem(notecloudRef.current)} id='notecloud'></div>
-                <div onClick={() => handleClickOnItem(moviecritRef.current)} id='moviecrit'></div>
+                <div onClick={() => handleClickOnItem(foodiemakersRef.current, 1)} id='foodiemakers'></div>
+                <div onClick={() => handleClickOnItem(mcmanagerRef.current, 2)} id='mcmanager'></div>
+                <div onClick={() => handleClickOnItem(notecloudRef.current, 3)} id='notecloud'></div>
+                <div onClick={() => handleClickOnItem(moviecritRef.current, 4)} id='moviecrit'></div>
+            </div>
+
+            <div className={styles.CardsCarrousel_container_arrows}>
+                <button
+                    onClick={handleArrowUp}
+                    className={styles.CardsCarrousel_arrows_up}
+                    style={{ pointerEvents: currentProject == 1 ? "none" : "auto", opacity: currentProject == 1 ? "0.2" : "1" }}
+                    disabled={currentProject == 1 ? true : false}
+                >
+                </button>
+
+                <button
+                    onClick={handleArrowDown}
+                    className={styles.CardsCarrousel_arrows_down}
+                    style={{ pointerEvents: currentProject == 4 ? "none" : "auto", opacity: currentProject == 4 ? "0.2" : "1" }}
+                    disabled={currentProject == 4 ? true : false}
+                >
+                </button>
             </div>
 
             <div className={styles.CardsCarrousel_container} ref={cardsContainerRef}>

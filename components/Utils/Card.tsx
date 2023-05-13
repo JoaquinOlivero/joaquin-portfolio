@@ -1,7 +1,7 @@
 import styles from "../../styles/Utils/CardsCarrousel/Card.module.scss"
 import Image from "next/image"
 import Link from "next/link"
-import { forwardRef, useEffect } from "react"
+import { forwardRef } from "react"
 
 type Props = {
     name: string
@@ -46,7 +46,7 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
                         <Link href={`https://github.com/${github}`} onMouseEnter={(e) => mouseEnterBtn(e.currentTarget)} onMouseLeave={(e) => mouseLeaveBtn(e.currentTarget)} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: colors[0] }}>GitHub</Link>
                     </div>
                 </div>
-                <div className={styles.Card_right} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%);` }}>
+                <div className={styles.Card_right} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)` }}>
                     <div className={styles.Card_right_image_container}>
                         <Image src={image} fill={true} alt={name} />
                     </div>
@@ -56,5 +56,7 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
 
     )
 })
+
+Card.displayName = "Card"
 
 export default Card
