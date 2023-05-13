@@ -45,9 +45,11 @@ function AboutMe() {
                             <ul>
                                 <li><Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/golang-1.svg" alt="Golang" />Golang</li>
                                 <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="TypeScript" />TypeScript</li>
+                                <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/337/337953.png" alt="SQL" />SQL</li>
                                 <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />JavaScript</li>
                                 <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />HTML</li>
                                 <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" />CSS</li>
+                                <li><Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />Python</li>
                             </ul>
                         </div>
                         <div>
@@ -70,6 +72,7 @@ function AboutMe() {
                             <h3>Databases</h3>
                             <ul>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL" /> PostgreSQL</li>
+                                <li> <Image width={25} height={20} src="https://cdn.icon-icons.com/icons2/2699/PNG/512/sqlite_logo_icon_169724.png" alt="SQLite" /> SQLite</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" /> MongoDB</li>
                             </ul>
                         </div>
