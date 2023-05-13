@@ -55,10 +55,10 @@ function AboutMe() {
                         <div>
                             <h3>Frameworks/Tools</h3>
                             <ul>
-                                <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" /> Node.js</li>
-                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" /> React</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" /> Next.js</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" /> React</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/electron-1.svg" alt="Electron" /> Electron</li>
+                                <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" /> Node.js</li>
                                 <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="SASS" /> SASS</li>
                                 <li> <Image width={25} height={20} src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" alt="Linux" /> Linux</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" /> Docker</li>
