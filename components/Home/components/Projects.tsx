@@ -28,6 +28,57 @@ function Projects() {
         <div className={styles.Projects} id='projects' ref={projectsRef}>
             <h2>Projects</h2>
             <div className={styles.Projects_cards_container}>
+                {/* FoodieMakers */}
+                <div className={styles.Projects_card_container}>
+                    <div className={styles.Projects_card_content}>
+                        <div className={styles.Projects_card_left}>
+
+                            <div className={styles.Projects_card_left_title}>
+                                FoodieMakers
+                            </div>
+                            <div className={styles.Projects_card_left_stack}>
+                                Go - Next.js - PostgreSQL
+                            </div>
+                            <div className={styles.Projects_card_left_paragraph}>
+                                Marketplace for food manufacturers.
+                            </div>
+                            <div className={styles.Projects_card_left_btns} id={styles.Projects_card_left_btns_foodiemakers}>
+                                <Link href="https://fm.joaquinolivero.com" target='_blank' rel="noopener noreferrer">Website</Link>
+                                <Link href="https://github.com/JoaquinOlivero/FoodieMakersGo" target="_blank" rel="noopener noreferrer">GitHub</Link>
+                            </div>
+                        </div>
+                        <div className={styles.Projects_card_right} id={styles.foodiemakers_card_right_background}>
+                            <div className={styles.Projects_card_right_image_container}>
+                                <Image src='/images/foodiemakers.png' fill={true} style={{ objectFit: "cover", objectPosition: "0% 0%" }} alt='notecloud' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* MCManager */}
+                <div className={styles.Projects_card_container}>
+                    <div className={styles.Projects_card_content}>
+                        <div className={styles.Projects_card_left}>
+
+                            <div className={styles.Projects_card_left_title}>
+                                MCManager
+                            </div>
+                            <div className={styles.Projects_card_left_stack}>
+                                Go - Next.js - SQLite
+                            </div>
+                            <div className={styles.Projects_card_left_paragraph}>
+                                Minecraft server manager with easy-to-use UI.
+                            </div>
+                            <div className={styles.Projects_card_left_btns} id={styles.Projects_card_left_btns_mcmanager}>
+                                <Link href="https://github.com/JoaquinOlivero/MCManager" target="_blank" rel="noopener noreferrer">GitHub</Link>
+                            </div>
+                        </div>
+                        <div className={styles.Projects_card_right} id={styles.mcmanager_card_right_background}>
+                            <div className={styles.Projects_card_right_image_container}>
+                                <Image src='/images/mcmanager.png' fill={true} style={{ objectFit: "cover", objectPosition: "0% 0%" }} alt='notecloud' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {/* NOTECLOUD */}
                 <div className={styles.Projects_card_container}>
                     <div className={styles.Projects_card_content}>
@@ -82,53 +133,6 @@ function Projects() {
                 </div>
             </div>
             <div className={styles.Projects_extra}>
-                <div className={styles.Projects_current_work_container}>
-                    <h3>Currently working on</h3>
-                    <div className={styles.Projects_extra_cards}>
-                        <div className={styles.Projects_extra_card_container}>
-                            <div className={styles.Projects_extra_card_content}>
-                                <h4>codePDF</h4>
-                                <span>Node - Next.js - Express</span>
-                                <p>Create and style PDF documents with code.</p>
-                                <div className={styles.Projects_extra_card_content_btns}>
-                                    <Link href="https://codepdf.joaquinolivero.xyz/" target="_blank" rel="noopener noreferrer">Website</Link>
-                                    <Link href="https://rapidapi.com/ChipiBarijho/api/codepdf" target="_blank" rel="noopener noreferrer">RapidAPI</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={styles.Projects_other_projects_container}>
-                    <h3>Other projects</h3>
-                    <div className={styles.Projects_extra_cards}>
-
-                        {/* FoodieMakers */}
-                        <div className={styles.Projects_extra_card_container}>
-                            <div className={styles.Projects_extra_card_content}>
-                                <h4>FoodieMakers</h4>
-                                <span>Node - EJS - Express - MongoDB</span>
-                                <p>Marketplace for food manufacturers.</p>
-                                <div className={styles.Projects_extra_card_content_btns}>
-                                    <Link href="https://foodiemakers.xyz" target="_blank" rel="noopener noreferrer">Website</Link>
-                                    <Link href="https://github.com/JoaquinOlivero/foodiemakers" target="_blank" rel="noopener noreferrer">GitHub</Link>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Minecraft Launcher */}
-                        <div className={styles.Projects_extra_card_container}>
-                            <div className={styles.Projects_extra_card_content}>
-                                <h4>Minecraft Launcher</h4>
-                                <span>Electron.js</span>
-                                <p>Personal Minecraft server launcher for Google Cloud Platform VM.</p>
-                                <div className={styles.Projects_extra_card_content_btns}>
-                                    <Link href="https://github.com/JoaquinOlivero/gcpvm-minecraft-launcher" target="_blank" rel="noopener noreferrer">GitHub</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
