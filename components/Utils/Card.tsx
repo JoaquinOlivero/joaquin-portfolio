@@ -10,10 +10,11 @@ type Props = {
     website?: string
     github: string
     colors: Array<string>
-    image: string
+    image?: string
+    video?: string
 }
 
-const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, website, github, colors, image }: Props, ref) => {
+const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, website, github, colors, image, video }: Props, ref) => {
 
     const mouseEnterBtn = (element: HTMLAnchorElement) => {
         element.setAttribute("style", `background-color: ${colors[1]};`)
@@ -47,9 +48,17 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
                     </div>
                 </div>
                 <div className={styles.Card_right} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)` }}>
-                    <div className={styles.Card_right_image_container}>
-                        <Image src={image} fill={true} alt={name} />
-                    </div>
+                    {image &&
+                        <div className={styles.Card_right_image_container}>
+                            <Image src={image} fill={true} alt={name} />
+                        </div>
+                    }
+
+                    {video &&
+                        <div className={styles.Card_right_video_container}>
+                            <iframe src={video} height="100%" width="100%"></iframe>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
