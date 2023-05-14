@@ -1,26 +1,24 @@
-# pull official base image
-FROM node:16
+FROM golang:alpine AS builder
+# Install git.
 
-# set working directory
+# Git is required for fetching the dependencies.
+RUN apk update && apk add --no-cache git
+WORKDIR $GOPATH/src/mypackage/myapp/
+COPY api/main.go api/go.mod .
+
+# Fetch dependencies.
+# Using go get.
+RUN go get -d -v
+
+# Build the binary.
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -ldflags="-w -s" -o  /go/bin/joaquin-portfolio
+
+FROM scratch
+# create dir for go binary and static html files.
 WORKDIR /app
 
-# Set the application's environment variables
+# Copy our static executable.
+COPY --from=builder /go/bin/joaquin-portfolio joaquin-portfolio
 
-# install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
-
-# Copies everything over to Docker environment
-COPY . ./
-
-#Build for production
-RUN npm run build
-
-# Install 'serve' to run the application.
-
-
-#Port used by the application
-EXPOSE 3000
-# Run application
-CMD ["npm", "start"]
+# Run the golang binary.
+ENTRYPOINT ["/app/joaquin-portfolio"]
