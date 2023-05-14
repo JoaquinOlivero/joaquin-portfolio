@@ -89,3 +89,22 @@
     }
   }
 }
+
+@media (max-width: 1700px) {
+  .AboutMe {
+    .AboutMe_content {
+      gap: 25px;
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      .AboutMe_paragraphs {
+        width: 75%;
+      }
+
+      .AboutMe_skills {
+        width: 75%;
+      }
+    }
+  }
+}

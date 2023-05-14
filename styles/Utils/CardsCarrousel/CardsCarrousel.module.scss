@@ -73,3 +73,19 @@
     }
   }
 }
+
+@media (max-width: 1700px) {
+  .CardsCarrousel_container {
+    .CardsCarrousel_container_dots {
+      left: 12.5%;
+    }
+
+    .CardsCarrousel_container_arrows {
+      right: 12%;
+    }
+
+    .CardsCarrousel_container {
+      width: 70%;
+    }
+  }
+}

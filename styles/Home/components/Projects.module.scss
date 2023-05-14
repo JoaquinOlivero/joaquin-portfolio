@@ -21,3 +21,16 @@
     height: 41.5%;
   }
 }
+
+@media (max-width: 1700px) {
+  .Projects {
+    justify-content: center;
+    h2 {
+      font-size: 22px;
+      height: 2%;
+    }
+    .Projects_extra {
+      width: 70%;
+    }
+  }
+}
