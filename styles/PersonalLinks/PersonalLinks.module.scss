@@ -1,0 +1,15 @@
+.PersonalLinks {
+  position: fixed;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 1%;
+  transition: opacity 500ms;
+  a {
+    transition: transform 150ms;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

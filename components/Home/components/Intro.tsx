@@ -9,11 +9,13 @@ function Intro() {
             entries.forEach(entry => {
                 if (entry.intersectionRatio > 0.1 && entry.intersectionRatio <= 0.4) {
                     document.getElementById('sideNavbar').setAttribute('style', 'display: flex')
+                    document.getElementById('personalLinks').setAttribute('style', 'opacity: 0.7; color: rgb(26, 161, 155); font-weight: 500')
                     setTimeout(() => {
                         document.getElementById('sideNavbar').setAttribute('style', 'transform: translateX(0%)')
                     }, 50);
                 } else if (entry.intersectionRatio >= 0.4) {
                     document.getElementById('sideNavbar').setAttribute('style', 'transform: translateX(200%)')
+                    document.getElementById('personalLinks').setAttribute('style', 'opacity: 0;')
                     setTimeout(() => {
                         document.getElementById('sideNavbar').setAttribute('style', 'display: none')
                     }, 210);
