@@ -48,9 +48,9 @@ function Projects() {
                 <Card
                     name='Twitcher'
                     description='Automated 24/7 video and audio Twitch streaming CLI based tool.'
-                    languages={["Go", "FFmpeg"]}
+                    languages={["Go", "FFmpeg", "SQLite"]}
                     github='JoaquinOlivero/Twitcher'
-                    colors={["#00ADD8", "#00ADD8"]}
+                    colors={["#00ADD8", "#007997"]}
                     video={streamUrl}
                 />
             </div>
