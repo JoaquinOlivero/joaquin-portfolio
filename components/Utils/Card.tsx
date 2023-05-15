@@ -50,7 +50,7 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
                 <div className={styles.Card_right} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)` }}>
                     {image &&
                         <div className={styles.Card_right_image_container}>
-                            <Image src={image} fill={true} alt={name} />
+                            <Image src={image} fill={true} alt={name} priority={true} />
                         </div>
                     }
 
