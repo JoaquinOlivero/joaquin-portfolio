@@ -61,13 +61,17 @@ function AboutMe() {
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" /> React</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/electron-1.svg" alt="Electron" /> Electron</li>
                                 <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" /> Node.js</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" alt="Tailwind" /> Tailwind</li>
                                 <li> <Image width={25} height={20} src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="SASS" /> SASS</li>
                                 <li> <Image width={25} height={20} src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" alt="Linux" /> Linux</li>
-                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" /> Docker</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/docker-4.svg" alt="Docker" /> Docker</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git" /> Git</li>
                                 <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub" /> GitHub</li>
                                 <li> <Image width={25} height={20} src="/images/cloudflare-icon-512x512-c1lpcyo0.png " alt="CloudFlare" /> CloudFlare</li>
                                 <li> <Image width={25} height={20} src="https://caddyserver.com/resources/images/caddy-circle-lock.svg" alt="Caddy" /> Caddy</li>
+                                <li> <Image width={25} height={20} src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/FFmpeg_icon.svg/1200px-FFmpeg_icon.svg.png" alt="ffmpeg" /> FFmpeg</li>
+                                <li> <Image width={25} height={20} src="https://plugins.jetbrains.com/files/16889/374979/icon/pluginIcon.png" alt="gRPC" /> gRPC</li>
+                                <li> <Image width={25} height={20} src="https://cdn.worldvectorlogo.com/logos/webrtc.svg" alt="webRTC" /> webRTC</li>
                             </ul>
                         </div>
                         <div>

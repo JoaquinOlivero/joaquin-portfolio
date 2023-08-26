@@ -8,13 +8,14 @@ type Props = {
     description: string
     languages: Array<string>
     website?: string
+    websiteBtnText?: string
     github: string
     colors: Array<string>
     image?: string
     video?: string
 }
 
-const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, website, github, colors, image, video }: Props, ref) => {
+const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, website, websiteBtnText, github, colors, image, video }: Props, ref) => {
     const imageRef = useRef<HTMLDivElement>(null)
     const videoRef = useRef<HTMLDivElement>(null)
     const contentRef = useRef<HTMLDivElement>(null)
@@ -39,9 +40,9 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
 
                 video ? video = false : video = true
 
-            }, 10000)
+            }, 16000)
         }
-    }, [image, video, imageRef.current, videoRef.current, contentRef.current])
+    }, [image, video])
 
 
     return (
@@ -62,7 +63,7 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
                     </div>
                     <div className={styles.Card_left_btns}>
                         {website &&
-                            <Link href={website} onMouseEnter={(e) => mouseEnterBtn(e.currentTarget)} onMouseLeave={(e) => mouseLeaveBtn(e.currentTarget)} target='_blank' rel="noopener noreferrer" style={{ backgroundColor: colors[0] }}>Website</Link>
+                            <Link href={website} onMouseEnter={(e) => mouseEnterBtn(e.currentTarget)} onMouseLeave={(e) => mouseLeaveBtn(e.currentTarget)} target='_blank' rel="noopener noreferrer" style={{ backgroundColor: colors[0] }}>{websiteBtnText ? websiteBtnText : "Website"}</Link>
                         }
                         <Link href={`https://github.com/${github}`} onMouseEnter={(e) => mouseEnterBtn(e.currentTarget)} onMouseLeave={(e) => mouseLeaveBtn(e.currentTarget)} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: colors[0] }}>GitHub</Link>
                     </div>

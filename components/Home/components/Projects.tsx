@@ -45,6 +45,8 @@ function Projects() {
             <div className={styles.Projects_extra}>
                 <Card
                     name='Twitcher'
+                    website='https://www.twitch.tv/beats10'
+                    websiteBtnText='Twitch'
                     description='Automated 24/7 web-GUI broadcast software with live preview.'
                     languages={["Go", "Next.js", "FFmpeg", "SQLite", "gRPC", "webRTC"]}
                     github='JoaquinOlivero/Twitcher'
