@@ -24,6 +24,7 @@ function Projects() {
                 if (entry.intersectionRatio <= 0.5) {
                     document.getElementById('projectsSideNavbar').setAttribute('style', 'opacity: 0.2')
                 } else if (entry.intersectionRatio >= 0.5) {
+                    document.getElementById('sideNavbar').setAttribute('style', 'transform: translateX(0); opacity: 1')
                     document.getElementById('projectsSideNavbar').setAttribute('style', 'opacity: 0.7; color: rgb(26, 161, 155); font-weight: 500')
                 }
             })
@@ -31,13 +32,10 @@ function Projects() {
 
         projectsObserver.observe(projectsRef.current)
 
-
         return () => {
             projectsObserver.unobserve(projectsRef.current)
-
         }
     }, [])
-
 
     return (
         <div className={styles.Projects} id='projects' ref={projectsRef}>
@@ -47,14 +45,14 @@ function Projects() {
             <div className={styles.Projects_extra}>
                 <Card
                     name='Twitcher'
-                    description='Automated 24/7 video and audio Twitch streaming CLI based tool.'
-                    languages={["Go", "FFmpeg", "SQLite"]}
+                    description='Automated 24/7 web-GUI broadcast software with live preview.'
+                    languages={["Go", "Next.js", "FFmpeg", "SQLite", "gRPC", "webRTC"]}
                     github='JoaquinOlivero/Twitcher'
                     colors={["#00ADD8", "#007997"]}
                     video={streamUrl}
+                    image='images/1b.gif'
                 />
             </div>
-
         </div>
     )
 }

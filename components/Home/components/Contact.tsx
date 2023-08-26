@@ -55,6 +55,7 @@ function Contact() {
                 if (entry.intersectionRatio <= 0.5) {
                     document.getElementById('contactSideNavbar').setAttribute('style', 'opacity: 0.2')
                 } else if (entry.intersectionRatio >= 0.5) {
+                    document.getElementById('sideNavbar').setAttribute('style', 'transform: translateX(0); opacity: 1')
                     document.getElementById('contactSideNavbar').setAttribute('style', 'opacity: 0.7; color: rgb(26, 161, 155); font-weight: 500')
                 }
             })

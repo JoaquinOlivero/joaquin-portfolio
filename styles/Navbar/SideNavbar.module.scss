@@ -9,6 +9,7 @@
   text-align: center;
   transform: translateX(200%);
   transition: transform 200ms ease-in-out;
+  opacity: 0;
   z-index: 2;
   .SideNavbar_content_menu {
     display: flex;

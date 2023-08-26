@@ -1,7 +1,7 @@
 import styles from "../../styles/Utils/CardsCarrousel/Card.module.scss"
 import Image from "next/image"
 import Link from "next/link"
-import { forwardRef } from "react"
+import { forwardRef, useEffect, useRef } from "react"
 
 type Props = {
     name: string
@@ -15,6 +15,9 @@ type Props = {
 }
 
 const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, website, github, colors, image, video }: Props, ref) => {
+    const imageRef = useRef<HTMLDivElement>(null)
+    const videoRef = useRef<HTMLDivElement>(null)
+    const contentRef = useRef<HTMLDivElement>(null)
 
     const mouseEnterBtn = (element: HTMLAnchorElement) => {
         element.setAttribute("style", `background-color: ${colors[1]};`)
@@ -23,6 +26,23 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
     const mouseLeaveBtn = (element: HTMLAnchorElement) => {
         element.setAttribute("style", `background-color: ${colors[0]};`)
     }
+
+    useEffect(() => {
+        if (image && video && imageRef.current && videoRef.current && contentRef.current) {
+            let video = false
+            setInterval(function () {
+                contentRef.current.scrollTo({
+                    top: video ? imageRef.current.offsetTop : videoRef.current.offsetTop,
+                    left: 0,
+                    behavior: "smooth",
+                })
+
+                video ? video = false : video = true
+
+            }, 10000)
+        }
+    }, [image, video, imageRef.current, videoRef.current, contentRef.current])
+
 
     return (
         <div className={styles.Card_container} ref={ref}>
@@ -47,22 +67,36 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
                         <Link href={`https://github.com/${github}`} onMouseEnter={(e) => mouseEnterBtn(e.currentTarget)} onMouseLeave={(e) => mouseLeaveBtn(e.currentTarget)} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: colors[0] }}>GitHub</Link>
                     </div>
                 </div>
-                <div className={styles.Card_right} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)` }}>
-                    {image &&
+                {image && !video &&
+                    <div className={styles.Card_right} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)` }}>
                         <div className={styles.Card_right_image_container}>
                             <Image src={image} fill={true} alt={name} priority={true} />
                         </div>
-                    }
+                    </div>
+                }
 
-                    {video &&
+                {video && !image &&
+                    <div className={styles.Card_right} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)` }}>
                         <div className={styles.Card_right_video_container}>
                             <iframe src={video} height="100%" width="100%"></iframe>
                         </div>
-                    }
-                </div>
+                    </div>
+                }
+
+                {video && image &&
+                    <div className={styles.Card_right_twitcher} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)` }}>
+                        <div className={styles.Card_twitcher_content} ref={contentRef}>
+                            <div className={styles.Card_right_image_container} ref={imageRef}>
+                                <Image src={image} fill={true} alt={name} priority={true} />
+                            </div>
+                            <div className={styles.Card_right_video_container} ref={videoRef}>
+                                <iframe src={video} height="100%" width="100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
-
     )
 })
 
