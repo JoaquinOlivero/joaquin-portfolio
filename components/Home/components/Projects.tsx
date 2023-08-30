@@ -48,7 +48,7 @@ function Projects() {
                     website='https://www.twitch.tv/beats10'
                     websiteBtnText='Twitch'
                     description='Automated 24/7 web-GUI broadcast software with live preview.'
-                    languages={["Go", "Next.js", "FFmpeg", "SQLite", "gRPC", "webRTC"]}
+                    languages={["Go", "TypeScript", "Next.js", "FFmpeg", "SQLite", "gRPC", "webRTC"]}
                     github='JoaquinOlivero/Twitcher'
                     colors={["#00ADD8", "#007997"]}
                     video={streamUrl}

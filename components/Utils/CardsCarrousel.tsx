@@ -152,7 +152,7 @@ const CardsCarrousel = () => {
                     ref={foodiemakersRef}
                     name={"foodiemakers"}
                     description='Marketplace for food manufacturers.'
-                    languages={["Go", "Next.js", "PostgreSQL"]}
+                    languages={["Go", "TypeScript", "Next.js", "PostgreSQL"]}
                     website="https://fm.joaquinolivero.com"
                     github='JoaquinOlivero/FoodieMakersGo'
                     colors={["#ff5650", "#ff9900"]}
@@ -164,7 +164,7 @@ const CardsCarrousel = () => {
                     ref={mcmanagerRef}
                     name='mcmanager'
                     description='Minecraft server manager with easy-to-use UI.'
-                    languages={["Go", "Next.js", "SQLite"]}
+                    languages={["Go", "TypeScript", "Next.js", "SQLite"]}
                     github='JoaquinOlivero/MCManager'
                     colors={["#2a263d", "#fe5260"]}
                     image='/images/mcmanager-resized.png'
