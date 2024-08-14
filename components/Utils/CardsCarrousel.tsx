@@ -8,10 +8,33 @@ const CardsCarrousel = () => {
     const mcmanagerRef = useRef<HTMLDivElement>(null)
     const notecloudRef = useRef<HTMLDivElement>(null)
     const moviecritRef = useRef<HTMLDivElement>(null)
+    const twitcherRef = useRef<HTMLDivElement>(null)
     const [currentProject, setCurrentProject] = useState<number>(1)
+    const [streamUrl, setStreamUrl] = useState<string | null>(null)
 
     // Observers
     useEffect(() => {
+        // check environment mode to set streamUrl
+        if (process.env.NODE_ENV == "development") {
+            setStreamUrl('https://www.youtube.com/embed/D1f560iW1MM?rel=0&amp;autoplay=1&mute=1')
+        }
+
+        if (process.env.NODE_ENV == "production") {
+            setStreamUrl('https://www.youtube.com/embed/D1f560iW1MM?rel=0&amp;autoplay=1&mute=1')
+        }
+
+        // Twitcher observer
+        const twitcherOberserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio <= 0.5) {
+                    document.getElementById('twitcher').setAttribute('style', 'opacity: 0.2')
+                } else if (entry.intersectionRatio >= 0.5) {
+                    document.getElementById('twitcher').setAttribute('style', 'opacity: 0.7; background-color: rgb(26, 161, 155); transform: scale(1.05);')
+                }
+            });
+        }, { threshold: [0.0, 0.5] })
+
+        twitcherOberserver.observe(twitcherRef.current)
 
         // FoodieMakers observer
         const foodiemakersOberserver = new IntersectionObserver(entries => {
@@ -52,8 +75,6 @@ const CardsCarrousel = () => {
 
         notecloudOberserver.observe(notecloudRef.current)
 
-
-
         // Moviecrit observer
         const moviecritOberserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -82,15 +103,18 @@ const CardsCarrousel = () => {
     }
 
     const handleArrowDown = () => {
-        if (currentProject < 4) {
+        if (currentProject < 5) {
             switch (currentProject) {
                 case 1:
-                    handleClickOnItem(mcmanagerRef.current, currentProject + 1)
+                    handleClickOnItem(foodiemakersRef.current, currentProject + 1)
                     break;
                 case 2:
-                    handleClickOnItem(notecloudRef.current, currentProject + 1)
+                    handleClickOnItem(mcmanagerRef.current, currentProject + 1)
                     break;
                 case 3:
+                    handleClickOnItem(notecloudRef.current, currentProject + 1)
+                    break;
+                case 4:
                     handleClickOnItem(moviecritRef.current, currentProject + 1)
                     break;
                 default:
@@ -103,12 +127,15 @@ const CardsCarrousel = () => {
         if (currentProject > 1) {
             switch (currentProject) {
                 case 2:
-                    handleClickOnItem(foodiemakersRef.current, currentProject - 1)
+                    handleClickOnItem(twitcherRef.current, currentProject - 1)
                     break;
                 case 3:
-                    handleClickOnItem(mcmanagerRef.current, currentProject - 1)
+                    handleClickOnItem(foodiemakersRef.current, currentProject - 1)
                     break;
                 case 4:
+                    handleClickOnItem(mcmanagerRef.current, currentProject - 1)
+                    break;
+                case 5:
                     handleClickOnItem(notecloudRef.current, currentProject - 1)
                     break;
                 default:
@@ -121,31 +148,45 @@ const CardsCarrousel = () => {
         <div className={styles.CardsCarrousel_container}>
 
             <div className={styles.CardsCarrousel_container_dots}>
-                <div onClick={() => handleClickOnItem(foodiemakersRef.current, 1)} id='foodiemakers'></div>
-                <div onClick={() => handleClickOnItem(mcmanagerRef.current, 2)} id='mcmanager'></div>
-                <div onClick={() => handleClickOnItem(notecloudRef.current, 3)} id='notecloud'></div>
-                <div onClick={() => handleClickOnItem(moviecritRef.current, 4)} id='moviecrit'></div>
+                <div onClick={() => handleClickOnItem(twitcherRef.current, 1)} id='twitcher'></div>
+                <div onClick={() => handleClickOnItem(foodiemakersRef.current, 2)} id='foodiemakers'></div>
+                <div onClick={() => handleClickOnItem(mcmanagerRef.current, 3)} id='mcmanager'></div>
+                <div onClick={() => handleClickOnItem(notecloudRef.current, 4)} id='notecloud'></div>
+                <div onClick={() => handleClickOnItem(moviecritRef.current, 5)} id='moviecrit'></div>
             </div>
 
             <div className={styles.CardsCarrousel_container_arrows}>
                 <button
                     onClick={handleArrowUp}
                     className={styles.CardsCarrousel_arrows_up}
-                    style={{ pointerEvents: currentProject == 1 ? "none" : "auto", opacity: currentProject == 1 ? "0.2" : "1" }}
-                    disabled={currentProject == 1 ? true : false}
+                    style={{ pointerEvents: currentProject == 1 ? "none" : "auto", opacity: currentProject === 1 ? "0.2" : "1" }}
+                    disabled={currentProject === 1 ?? false}
                 >
                 </button>
 
                 <button
                     onClick={handleArrowDown}
                     className={styles.CardsCarrousel_arrows_down}
-                    style={{ pointerEvents: currentProject == 4 ? "none" : "auto", opacity: currentProject == 4 ? "0.2" : "1" }}
-                    disabled={currentProject == 4 ? true : false}
+                    style={{ pointerEvents: currentProject == 5 ? "none" : "auto", opacity: currentProject === 5 ? "0.2" : "1" }}
+                    disabled={currentProject === 5 ?? false}
                 >
                 </button>
             </div>
 
             <div className={styles.CardsCarrousel_container} ref={cardsContainerRef}>
+                {/* Twitcher */}
+                <Card
+                    ref={twitcherRef}
+                    name='twitcher'
+                    website='https://youtu.be/D1f560iW1MM'
+                    websiteBtnText='Youtube'
+                    description='Automated 24/7 web-GUI broadcast software with live preview made for Twitch and Youtube.'
+                    languages={["Go", "TypeScript", "Next.js", "FFmpeg", "SQLite", "gRPC", "webRTC"]}
+                    github='JoaquinOlivero/Twitcher'
+                    colors={["#00ADD8", "#007997"]}
+                    video={streamUrl}
+                    image='images/1b.gif'
+                />
 
                 {/* FoodieMakers */}
                 <Card

@@ -79,7 +79,7 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
                 {video && !image &&
                     <div className={styles.Card_right} style={{ background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)` }}>
                         <div className={styles.Card_right_video_container}>
-                            <iframe src={video} height="100%" width="100%"></iframe>
+                            <iframe src={video} height="100%" width="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                         </div>
                     </div>
                 }
@@ -91,7 +91,7 @@ const Card = forwardRef<HTMLDivElement, Props>(({ name, description, languages, 
                                 <Image src={image} fill={true} alt={name} priority={true} />
                             </div>
                             <div className={styles.Card_right_video_container} ref={videoRef}>
-                                <iframe src={video} height="100%" width="100%"></iframe>
+                                <iframe src={video} height="100%" width="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                             </div>
                         </div>
                     </div>

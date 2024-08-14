@@ -89,3 +89,20 @@
     }
   }
 }
+
+@media (max-width: 1699px) {
+  .CardsCarrousel_container {
+    .CardsCarrousel_container_dots {
+      top: 0;
+    }
+
+    .CardsCarrousel_container_arrows {
+      bottom: 0;
+    }
+
+    .CardsCarrousel_container {
+      width: 80%;
+      height: 100%;
+    }
+  }
+}

@@ -31,7 +31,7 @@ function AboutMe() {
                 <div>
                     <h2>About Me</h2>
                     <div className={styles.AboutMe_paragraphs}>
-                        <p>Hello! I'm a self taught, full-stack developer that has been enjoying learning and writing code for the last two years.</p>
+                        <p>Hello! I'm a self taught software developer that has been enjoying learning and writing code for the past two years.</p>
                         <p>My journey into software development began as a hobby. At some point in 2020 browsing the internet, I came upon a free Python course for beginners and decided to take it casually. Considering that I had no background in programming, the course resulted to be very challenging. However, the constant challenge even though frustrating at times and that rewarding feeling for overcoming challenges was what hooked me into programming, even as a side thing, as a hobby.</p>
                         <p>Fast forward to 2021, with some knowledge of Python I realized that I wanted to pursue a career in this field. However, rather than Python, I fully invested my time learning JavaScript to become a web developer.</p>
                         <p>Today, I am proud to be a Self Taught Developer that not only knows JavaScript but also many other programming languages and tools such as Go, TypeScript or FFmpeg. This never ending learning experience that this field has, that allows you to continually improve as a dev, discover new technologies is what basically makes me enjoy developing software.</p>

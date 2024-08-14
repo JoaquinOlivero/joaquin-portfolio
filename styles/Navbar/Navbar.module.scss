@@ -38,3 +38,23 @@
         }
     }
 }
+
+@media (max-width: 1699px) {
+    .container{
+        .Navbar_content{
+            width: 98%;
+            justify-content: flex-start;
+            .Navbar_content_logo{
+                font-weight: 600;
+                font-size: 25px;
+            }
+
+            .Navbar_content_menu{
+                width: 100%;
+                justify-content: center;
+                font-size: 11px;
+                gap: 25px;
+            }
+        }
+    }
+}

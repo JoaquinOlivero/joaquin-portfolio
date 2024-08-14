@@ -33,7 +33,7 @@ function Intro() {
     return (
         <div className={styles.Intro} ref={introRef}>
             <div className={styles.first}>Hello, my name is <span>Joaquin Olivero</span></div>
-            <div className={styles.second}>I am a full stack developer.</div>
+            <div className={styles.second}>I am a software developer.</div>
         </div>
     )
 }

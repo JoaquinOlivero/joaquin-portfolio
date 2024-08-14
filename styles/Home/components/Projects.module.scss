@@ -29,8 +29,17 @@
       font-size: 22px;
       height: 2%;
     }
-    .Projects_extra {
+    .Projects_extra { 
       width: 70%;
+    }
+  }
+}
+
+@media (max-width: 1699px) {
+  .Projects {
+    h2 {
+      font-size: 15px;
+      letter-spacing: 4px;
     }
   }
 }
